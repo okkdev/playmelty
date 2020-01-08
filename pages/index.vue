@@ -2,8 +2,9 @@
   <div class="container mx-auto h-full">
     <div class="flex flex-col h-full justify-center items-center">
       <h1 class="text-6xl">
-        meltyclub
+        PLAY
       </h1>
+      <img class="w-2/3" src="/img/logo.png" alt="melty blood logo" />
     </div>
   </div>
 </template>

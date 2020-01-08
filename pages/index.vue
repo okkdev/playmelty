@@ -15,9 +15,13 @@
 
     <div class="container mx-auto h-full">
       <div class="flex flex-col h-full justify-center items-center">
-        <h1 class="text-6xl tracking-widest font-gradient-2">
-          PLAY
-        </h1>
+        <div class="flex">
+          <img class="mr-6" src="/img/sway.gif" alt="neco sway" />
+          <h1 class="text-6xl tracking-widest font-gradient-2">
+            PLAY
+          </h1>
+          <img class="ml-6" src="/img/happy.gif" alt="neco happy" />
+        </div>
         <img class="w-2/3" src="/img/logo.png" alt="melty blood logo" />
 
         <div class="flex flex-col md:flex-row flex-wrap justify-center">

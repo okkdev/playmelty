@@ -2,11 +2,18 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+/* Fonts */
+@import url('https://fonts.googleapis.com/css?family=Rambla|Source+Sans+Pro&display=swap');
 
+/* Custom Styles */
 /* mobile fullscreen shenanigens */
 html,
 body,
 #__nuxt,
 #__layout {
     @apply h-full;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
 }

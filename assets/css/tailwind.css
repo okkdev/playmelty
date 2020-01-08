@@ -1,0 +1,12 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
+/* mobile fullscreen shenanigens */
+html,
+body,
+#__nuxt,
+#__layout {
+    @apply h-full;
+}

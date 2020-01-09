@@ -172,10 +172,15 @@ export default {
       this.video = false
       this.content = true
     }
+
+    if (this.$route.query.video === 'false') {
+      this.video = false
+    }
   },
   methods: {
     toggleVideo() {
       this.video = !this.video
+      this.$router.push({ path: '/', query: { video: this.video } })
     },
     acceptChallenge() {
       this.content = true
@@ -228,8 +233,8 @@ body {
   }
 }
 
-/* purgecss ignore */
 .new-challenger {
+  /* purgecss ignore current */
   font-family: 'Crimson Text', serif;
   font-size: 6rem;
   font-weight: 900;

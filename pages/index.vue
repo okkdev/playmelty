@@ -90,11 +90,14 @@
 
       <div class="flex flex-col h-full justify-center items-center">
         <div class="flex">
-          <img class="mr-6" src="/img/sway.gif" alt="neco sway" />
-          <h1 class="text-6xl tracking-widest font-gradient-2">
+          <img v-if="neco" class="mr-5" src="/img/sway.gif" alt="neco sway" />
+          <h1
+            @click="toggleNeco"
+            class="text-6xl tracking-widest font-gradient-2 cursor-pointer"
+          >
             PLAY
           </h1>
-          <img class="ml-6" src="/img/happy.gif" alt="neco happy" />
+          <img v-if="neco" class="ml-6" src="/img/happy.gif" alt="neco happy" />
         </div>
         <img class="w-2/3" src="/img/logo.png" alt="melty blood logo" />
 
@@ -171,8 +174,27 @@
 export default {
   data: () => ({
     video: true,
-    content: false
+    content: false,
+    neco: false
   }),
+  head() {
+    return {
+      title: 'Play Melty Blood!',
+      meta: [
+        { name: 'og:title', content: 'Play Melty Blood you wimp!' },
+        {
+          name: 'og:description',
+          content:
+            'We have the power of Jesus and Anime on our side. Getrausch di eh nitt.'
+        },
+        {
+          name: 'og:image',
+          content: 'https://play.meltyblood.club/img/sway.gif'
+        },
+        { name: 'og:image', content: 'https://play.meltyblood.club' }
+      ]
+    }
+  },
   mounted() {
     if (window.innerWidth <= 768) {
       this.video = false
@@ -190,6 +212,9 @@ export default {
     },
     acceptChallenge() {
       this.content = true
+    },
+    toggleNeco() {
+      this.neco = !this.neco
     }
   }
 }

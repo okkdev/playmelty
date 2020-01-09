@@ -266,7 +266,7 @@ body {
 
 .new-challenger {
   /* purgecss ignore current */
-  font-family: 'Crimson Text', serif;
+  font-family: 'Crmson Text', serif;
   font-size: 5rem;
   font-weight: 900;
   -webkit-text-stroke: 0.15rem rgb(255, 255, 255);

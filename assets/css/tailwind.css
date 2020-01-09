@@ -6,7 +6,12 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css');
 
 /* Fonts */
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro|Crimson+Text&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+
+@font-face {
+    font-family: 'Crmson Text';
+    src: url('/fonts/CrmsonText-Bold.ttf');
+}
 
 /* Custom Styles */
 /* mobile fullscreen shenanigens */

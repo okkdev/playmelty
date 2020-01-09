@@ -1,7 +1,7 @@
 <template>
   <div class="h-full">
     <div
-      v-if="video"
+      v-if="video && content"
       class="hidden md:block"
       style="position: fixed; z-index: -99; width: 100%; height: 100%"
     >
@@ -14,7 +14,56 @@
       </iframe>
     </div>
 
-    <div class="container mx-auto h-full flex flex-col">
+    <!-- Intro -->
+    <div
+      v-if="!content"
+      @click="acceptChallenge"
+      class="fixed h-full w-full z-30 flex justify-center items-center cursor-pointer"
+    >
+      <div class="fixed new-challenger pointer-events-none z-40">
+        <div class="flex flex-col items-end">
+          <div>
+            Here comes a New challenger!
+          </div>
+          <div class="text-6xl">
+            Recalculation Interrupted Now ...
+          </div>
+        </div>
+      </div>
+      <img
+        class="w-full a-bit-transparent static pointer-events-none"
+        src="/img/static.gif"
+        alt="static"
+      />
+    </div>
+
+    <!-- Modals -->
+    <!-- <div class="fixed h-full w-full modal-background z-20">
+      <div class="container h-full mx-auto flex justify-center items-center">
+        <div class="modal">
+          <a
+            class="button"
+            href="https://store.steampowered.com/app/411370/Melty_Blood_Actress_Again_Current_Code/"
+            target="_"
+          >
+            <i class="fab fa-steam-square font-normal mr-1"></i>
+            <span class="font-gradient">Buy the Game</span>
+          </a>
+          <a
+            class="button"
+            href="https://mega.nz/#!qRMTHK6A!QCBOqnH91TynUqQjddgm8omGBeIG5Yp_-iT-Q5QmTas"
+            target="_"
+          >
+            <i class="fas fa-cloud-download-alt mr-1"></i>
+            <span class="font-gradient">
+              Download community version with rollback netcode
+            </span>
+          </a>
+        </div>
+      </div>
+    </div> -->
+
+    <div v-if="content" class="content container mx-auto h-full flex flex-col">
       <div class="fixed right-0 m-3 a-bit-transparent">
         <div class="hidden md:flex flex-row">
           <div class="mr-2 tracking-widest uppercase">Video</div>
@@ -115,7 +164,8 @@
 <script>
 export default {
   data: () => ({
-    video: true
+    video: true,
+    content: false
   }),
   mounted() {
     if (window.innerWidth <= 768) {
@@ -125,6 +175,9 @@ export default {
   methods: {
     toggleVideo() {
       this.video = !this.video
+    },
+    acceptChallenge() {
+      this.content = true
     }
   }
 }
@@ -139,6 +192,60 @@ body {
 .button {
   background-color: rgba(0, 0, 0, 0.9);
   @apply rounded-sm py-2 px-3 border-2 border-gray-100 shadow font-semibold tracking-widest uppercase text-xl text-center m-4 outline-none;
+}
+
+.modal {
+  background-color: rgba(0, 0, 0, 0.9);
+  @apply rounded-sm p-8 border-2 border-gray-100 shadow;
+}
+
+.content {
+  animation: fade-in 2s;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.static {
+  animation-delay: 2s;
+  animation: static-grow 2s;
+  height: 30rem;
+}
+
+@keyframes static-grow {
+  0% {
+    height: 0rem;
+  }
+  100% {
+    height: 30rem;
+  }
+}
+
+.new-challenger {
+  font-family: 'Crimson Text', serif;
+  font-size: 6rem;
+  font-weight: 900;
+  -webkit-text-stroke: 0.15rem rgb(255, 255, 255);
+  background: linear-gradient(to right, rgb(245, 168, 168), rgb(189, 7, 7));
+  background-clip: text;
+  color: transparent;
+  animation-delay: 1s;
+  animation: new-challenger-move 1.5s ease-out;
+}
+
+@keyframes new-challenger-move {
+  0% {
+    transform: translateX(-2000px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
 }
 
 .font-gradient {

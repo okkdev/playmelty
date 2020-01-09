@@ -227,6 +227,7 @@ body {
   }
 }
 
+/* purgecss ignore */
 .new-challenger {
   font-family: 'Crimson Text', serif;
   font-size: 6rem;

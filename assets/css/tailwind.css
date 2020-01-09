@@ -6,10 +6,12 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css');
 
 /* Fonts */
-@import url('https://fonts.googleapis.com/css?family=Rambla|Source+Sans+Pro|Crimson+Text&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro|Crimson+Text&display=swap');
 
 /* Custom Styles */
 /* mobile fullscreen shenanigens */
+
+/* purgecss start ignore */
 html,
 body,
 #__nuxt,
@@ -20,3 +22,5 @@ body,
 body {
     font-family: 'Source Sans Pro', sans-serif;
 }
+
+/* purgecss end ignore */

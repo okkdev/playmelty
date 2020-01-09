@@ -25,7 +25,7 @@
           <div>
             Here comes a New challenger!
           </div>
-          <div class="text-6xl">
+          <div class="text-5xl">
             Recalculation Interrupted Now ...
           </div>
         </div>
@@ -98,63 +98,69 @@
         </div>
         <img class="w-2/3" src="/img/logo.png" alt="melty blood logo" />
 
-        <div class="flex flex-col md:flex-row flex-wrap justify-center">
-          <a
-            class="button"
-            href="https://store.steampowered.com/app/411370/Melty_Blood_Actress_Again_Current_Code/"
-            target="_"
-          >
-            <i class="fab fa-steam-square font-normal mr-1"></i>
-            <span class="font-gradient">Buy the Game</span>
-          </a>
-          <a
-            class="button"
-            href="https://mega.nz/#!qRMTHK6A!QCBOqnH91TynUqQjddgm8omGBeIG5Yp_-iT-Q5QmTas"
-            target="_"
-          >
-            <i class="fas fa-cloud-download-alt mr-1"></i>
-            <span class="font-gradient">
-              Download community version with rollback netcode
-            </span>
-          </a>
-          <a
-            class="button"
-            href="https://www.youtube.com/watch?v=Zz4L7uy3zj8"
-            target="_"
-          >
-            <i class="fab fa-youtube font-normal mr-1"></i>
-            <span class="font-gradient">Intro to Melty</span>
-          </a>
-          <a
-            class="button"
-            href="https://www.youtube.com/watch?v=yKPJWNZ8Idw"
-            target="_"
-          >
-            <i class="fab fa-youtube font-normal mr-1"></i>
-            <span class="font-gradient">Complete Guide to Melty</span>
-          </a>
-          <a
-            class="button"
-            href="http://wiki.mizuumi.net/w/Melty_Blood"
-            target="_"
-          >
-            <i class="fas fa-book mr-1"></i>
-            <span class="font-gradient">Mizuumi Wiki</span>
-          </a>
-          <a class="button" href="http://melty.games/" target="_">
-            <i class="fas fa-tv mr-1"></i>
-            <span class="font-gradient">Match Videos</span>
-          </a>
-          <a
-            class="button"
-            href="https://discordapp.com/invite/33cskPv"
-            target="_"
-          >
-            <i class="fab fa-discord font-normal mr-1"></i>
-            <span class="font-gradient">
-              Join the Discord
-            </span>
-          </a>
+        <div class="flex flex-col justify-center">
+          <div class="flex flex-col md:flex-row flex-wrap justify-center">
+            <a
+              class="button"
+              href="https://store.steampowered.com/app/411370/Melty_Blood_Actress_Again_Current_Code/"
+              target="_"
+            >
+              <i class="fab fa-steam-square font-normal mr-1"></i>
+              <span class="font-gradient">Buy the Game</span>
+            </a>
+            <a
+              class="button"
+              href="https://mega.nz/#!qRMTHK6A!QCBOqnH91TynUqQjddgm8omGBeIG5Yp_-iT-Q5QmTas"
+              target="_"
+            >
+              <i class="fas fa-cloud-download-alt mr-1"></i>
+              <span class="font-gradient">
+                Download community version with rollback netcode
+              </span>
+            </a>
+          </div>
+          <div class="flex flex-col md:flex-row flex-wrap justify-center">
+            <a
+              class="button"
+              href="https://www.youtube.com/watch?v=Zz4L7uy3zj8"
+              target="_"
+            >
+              <i class="fab fa-youtube font-normal mr-1"></i>
+              <span class="font-gradient">Intro to Melty</span>
+            </a>
+            <a
+              class="button"
+              href="https://www.youtube.com/watch?v=yKPJWNZ8Idw"
+              target="_"
+            >
+              <i class="fab fa-youtube font-normal mr-1"></i>
+              <span class="font-gradient">Complete Guide to Melty</span>
+            </a>
+            <a
+              class="button"
+              href="http://wiki.mizuumi.net/w/Melty_Blood"
+              target="_"
+            >
+              <i class="fas fa-book mr-1"></i>
+              <span class="font-gradient">Mizuumi Wiki</span>
+            </a>
+            <a class="button" href="http://melty.games/" target="_">
+              <i class="fas fa-tv mr-1"></i>
+              <span class="font-gradient">Match Videos</span>
+            </a>
+          </div>
+          <div class="flex flex-col md:flex-row flex-wrap justify-center">
+            <a
+              class="button"
+              href="https://discordapp.com/invite/33cskPv"
+              target="_"
+            >
+              <i class="fab fa-discord font-normal mr-1"></i>
+              <span class="font-gradient">
+                Join the Discord
+              </span>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -221,7 +227,7 @@ body {
 .static {
   animation-delay: 2s;
   animation: static-grow 2s;
-  height: 30rem;
+  height: 24rem;
 }
 
 @keyframes static-grow {
@@ -229,14 +235,14 @@ body {
     height: 0rem;
   }
   100% {
-    height: 30rem;
+    height: 24rem;
   }
 }
 
 .new-challenger {
   /* purgecss ignore current */
   font-family: 'Crimson Text', serif;
-  font-size: 6rem;
+  font-size: 5rem;
   font-weight: 900;
   -webkit-text-stroke: 0.15rem rgb(255, 255, 255);
   background: linear-gradient(to right, rgb(245, 168, 168), rgb(189, 7, 7));

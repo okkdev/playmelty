@@ -170,6 +170,7 @@ export default {
   mounted() {
     if (window.innerWidth <= 768) {
       this.video = false
+      this.content = true
     }
   },
   methods: {

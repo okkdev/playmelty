@@ -13,10 +13,12 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
-    "nuxt": "^2.0.0"
+    "nuxt": "^2.0.0",
+    "portal-vue": "^2.1.7"
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^1.0.0",
+    "tailwindcss": "^1.2.0-canary.5",
     "@nuxtjs/eslint-config": "^1.0.1",
     "@nuxtjs/eslint-module": "^1.0.0",
     "babel-eslint": "^10.0.1",

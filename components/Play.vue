@@ -137,6 +137,18 @@
                     <span class="font-gradient">Community Edition</span>
                   </a>
                 </div>
+                <p class="my-2 text-center text-lg">
+                  CCCaster guide:
+                </p>
+                <!-- Youtube Intro to Melty -->
+                <div class="mx-auto youtube-video">
+                  <iframe
+                    src="https://www.youtube.com/embed/aMxwkPb5kOM"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                </div>
               </Portal>
             </div>
             <!-- About the Game -->

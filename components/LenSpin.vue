@@ -7,7 +7,8 @@
 <script>
 export default {
   data: () => ({
-    lenSpin: false
+    lenSpin: false,
+    codeCount: 0
   }),
   mounted() {
     const root = this

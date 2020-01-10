@@ -19,7 +19,7 @@
     <!-- Intro -->
     <div
       v-if="!content"
-      @click="acceptChallenge"
+      @click="content = true"
       class="fixed h-full w-full z-30 flex justify-center items-center cursor-pointer"
     >
       <div class="fixed new-challenger pointer-events-none z-40">
@@ -36,17 +36,7 @@
     </div>
 
     <!-- Modal -->
-    <div
-      v-if="modal"
-      @click="closeModal"
-      class="fixed h-full w-full modal-background z-20"
-    >
-      <div class="container h-full mx-auto flex justify-center items-center">
-        <div class="modal">
-          <portal-target name="modal"></portal-target>
-        </div>
-      </div>
-    </div>
+    <Modal></Modal>
 
     <div v-if="content" class="content container mx-auto h-full flex flex-col">
       <div class="fixed right-0 m-3 a-bit-transparent">
@@ -77,7 +67,7 @@
         <div class="flex">
           <img v-if="neco" class="mr-5" src="/img/sway.gif" alt="neco sway" />
           <h1
-            @click="toggleNeco"
+            @click="neco = !neco"
             class="text-6xl tracking-widest font-gradient-2 cursor-pointer"
           >
             PLAY
@@ -155,18 +145,17 @@
 
 <script>
 import LenSpin from '~/components/LenSpin'
+import Modal from '~/components/Modal'
 
 export default {
   components: {
-    LenSpin
+    LenSpin,
+    Modal
   },
   data: () => ({
     video: true,
     content: false,
-    neco: false,
-    codeCount: 0,
-    lenSpin: false,
-    modal: false
+    neco: false
   }),
   head() {
     return {
@@ -199,15 +188,6 @@ export default {
     toggleVideo() {
       this.video = !this.video
       this.$router.push({ path: '/', query: { video: this.video } })
-    },
-    acceptChallenge() {
-      this.content = true
-    },
-    toggleNeco() {
-      this.neco = !this.neco
-    },
-    closeModal() {
-      this.modal = false
     }
   }
 }

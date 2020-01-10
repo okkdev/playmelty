@@ -1,3 +1,5 @@
+const join = require('path').join
+
 export default {
   mode: 'universal',
   /*
@@ -23,7 +25,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: [],
+  css: ['~/assets/css/tailwind.css'],
   /*
    ** Plugins to load before mounting the App
    */
@@ -33,22 +35,25 @@ export default {
    */
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
-    '@nuxtjs/eslint-module',
-    // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
-    '@nuxtjs/tailwindcss'
+    '@nuxtjs/eslint-module'
   ],
   /*
    ** Nuxt.js modules
    */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    'portal-vue/nuxt',
+    'nuxt-purgecss'
   ],
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
    */
   axios: {},
+  purgeCSS: {
+    mode: 'postcss'
+  },
   /*
    ** Build configuration
    */
@@ -56,6 +61,15 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) { }
+    extend(config, ctx) {},
+    extractCSS: true,
+    postcss: {
+      plugins: {
+        tailwindcss: join(__dirname, './tailwind.config.js')
+      },
+      preset: {
+        stage: 1
+      }
+    }
   }
 }

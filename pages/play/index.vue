@@ -39,7 +39,7 @@
     <Modal></Modal>
 
     <div v-if="content" class="content container mx-auto h-full flex flex-col">
-      <div class="fixed right-0 m-3 a-bit-transparent">
+      <div class="fixed right-0 m-3 opacity-75">
         <div class="hidden md:flex flex-row">
           <div class="mr-2 tracking-widest uppercase">Video</div>
           <div
@@ -264,7 +264,7 @@ body {
 }
 
 .a-bit-transparent {
-  opacity: 0.8;
+  opacity: 0.6;
 }
 
 .modal-background {

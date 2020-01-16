@@ -107,8 +107,23 @@
               <div><i class="fas fa-gamepad"></i></div>
               <div>Get Melty</div>
               <Portal v-if="modalContent === 'get'" to="modal">
-                <div class="title">
-                  Get Melty
+                <div class="flex justify-between">
+                  <div class="title">
+                    Get Melty
+                  </div>
+                  <div @click="modal = false" class="cursor-pointer z-50">
+                    <svg
+                      class="fill-current"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 18 18"
+                    >
+                      <path
+                        d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"
+                      ></path>
+                    </svg>
+                  </div>
                 </div>
                 <p class="mb-2">
                   Buy the game on Steam to support the developer.
@@ -159,8 +174,23 @@
               <div><i class="fas fa-info-circle"></i></div>
               <div>About Melty</div>
               <Portal v-if="modalContent === 'about'" to="modal">
-                <div class="title">
-                  About Melty
+                <div class="flex justify-between">
+                  <div class="title">
+                    About Melty
+                  </div>
+                  <div @click="modal = false" class="cursor-pointer z-50">
+                    <svg
+                      class="fill-current"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 18 18"
+                    >
+                      <path
+                        d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"
+                      ></path>
+                    </svg>
+                  </div>
                 </div>
                 <p class="mb-3">
                   Melty Blood is a fighting game developed by
@@ -220,7 +250,24 @@
               <div><i class="fas fa-graduation-cap"></i></div>
               <div>Learn Melty</div>
               <Portal v-if="modalContent === 'learn'" to="modal">
-                <div class="title">Learn Melty</div>
+                <div class="flex justify-between">
+                  <div class="title">
+                    Learn Melty
+                  </div>
+                  <div @click="modal = false" class="cursor-pointer z-50">
+                    <svg
+                      class="fill-current"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 18 18"
+                    >
+                      <path
+                        d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
                 <p class="mb-2 text-center text-lg">
                   General guide by
                   <a href="https://twitter.com/Fimbulvetr090" target="_">Alps</a
@@ -376,7 +423,7 @@ p {
 
 .modal {
   background-color: rgba(0, 0, 0, 0.9);
-  @apply rounded-sm p-8 mx-3 max-w-4xl border-2 border-gray-100 shadow overflow-y-auto;
+  @apply rounded-sm p-8 mx-3 max-w-4xl border-2 border-gray-100 shadow max-h-full overflow-y-auto;
   animation: fade-in 0.5s;
 }
 

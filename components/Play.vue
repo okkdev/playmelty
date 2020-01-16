@@ -235,9 +235,11 @@
                     allowfullscreen
                   ></iframe>
                 </div>
-                <p class="mb-2 text-center text-lg">
-                  Recommended characters for beginners guide by 
-                  <a href="https://twitter.com/OnemiESESEBEME" target="_">Onemi</a
+                <p class="mb-1 mt-6 text-center text-lg">
+                  Recommended characters for beginners guide by
+                  <a href="https://twitter.com/OnemiESESEBEME" target="_"
+                    >Onemi</a
+                  >:
                 </p>
                 <div class="flex flex-col md:flex-row flex-wrap justify-center">
                   <a
@@ -249,7 +251,7 @@
                     <span class="font-gradient">Beginner Characters</span>
                   </a>
                 </div>
-                <p class="mt-6 mb-1">
+                <p class="mt-3 mb-1 text-center">
                   The Mizuumi wiki is the best place for info about poverty
                   fighting games.
                 </p>
@@ -263,14 +265,14 @@
                     <span class="font-gradient">Mizuumi Wiki</span>
                   </a>
                 </div>
-                <p class="mt-3 mb-1">
+                <p class="mt-3 mb-1 text-center">
                   If you want to watch matches with specific characters, there's
                   melty.games and meltydb.
                 </p>
                 <div class="flex flex-col md:flex-row flex-wrap justify-center">
                   <a class="button" href="http://melty.games/" target="_">
                     <i class="fas fa-tv mr-1"></i>
-                    <span class="font-gradient">Melty Games</span>
+                    <span class="font-gradient">Melty.Games</span>
                   </a>
                   <a class="button" href="http://www.meltydb.com/" target="_">
                     <i class="fas fa-tv mr-1"></i>

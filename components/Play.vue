@@ -18,22 +18,8 @@
     <LenSpin></LenSpin>
 
     <!-- Intro -->
-    <div
-      v-if="!content"
-      @click="content = true"
-      class="fixed h-full w-full z-30 flex justify-center items-center cursor-pointer"
-    >
-      <div class="fixed new-challenger pointer-events-none z-40">
-        <div class="flex flex-col items-end">
-          <div>Here comes a New challenger!</div>
-          <div class="text-5xl">Recalculation Interrupted Now ...</div>
-        </div>
-      </div>
-      <img
-        class="w-full a-bit-transparent static pointer-events-none"
-        src="/img/static.gif"
-        alt="static"
-      />
+    <div v-if="!content" @click="content = true" class="h-full">
+      <Intro></Intro>
     </div>
 
     <!-- Modal -->
@@ -107,8 +93,23 @@
               <div><i class="fas fa-gamepad"></i></div>
               <div>Get Melty</div>
               <Portal v-if="modalContent === 'get'" to="modal">
-                <div class="title">
-                  Get Melty
+                <div class="flex justify-between">
+                  <div class="title">
+                    Get Melty
+                  </div>
+                  <div @click="modal = false" class="cursor-pointer z-50">
+                    <svg
+                      class="fill-current"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 18 18"
+                    >
+                      <path
+                        d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"
+                      ></path>
+                    </svg>
+                  </div>
                 </div>
                 <p class="mb-2">
                   Buy the game on Steam to support the developer.
@@ -159,8 +160,23 @@
               <div><i class="fas fa-info-circle"></i></div>
               <div>About Melty</div>
               <Portal v-if="modalContent === 'about'" to="modal">
-                <div class="title">
-                  About Melty
+                <div class="flex justify-between">
+                  <div class="title">
+                    About Melty
+                  </div>
+                  <div @click="modal = false" class="cursor-pointer z-50">
+                    <svg
+                      class="fill-current"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 18 18"
+                    >
+                      <path
+                        d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"
+                      ></path>
+                    </svg>
+                  </div>
                 </div>
                 <p class="mb-3">
                   Melty Blood is a fighting game developed by
@@ -220,7 +236,24 @@
               <div><i class="fas fa-graduation-cap"></i></div>
               <div>Learn Melty</div>
               <Portal v-if="modalContent === 'learn'" to="modal">
-                <div class="title">Learn Melty</div>
+                <div class="flex justify-between">
+                  <div class="title">
+                    Learn Melty
+                  </div>
+                  <div @click="modal = false" class="cursor-pointer z-50">
+                    <svg
+                      class="fill-current"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 18 18"
+                    >
+                      <path
+                        d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
                 <p class="mb-2 text-center text-lg">
                   General guide by
                   <a href="https://twitter.com/Fimbulvetr090" target="_">Alps</a
@@ -300,10 +333,12 @@
 
 <script>
 import LenSpin from '~/components/LenSpin'
+import Intro from '~/components/Intro'
 
 export default {
   components: {
-    LenSpin
+    LenSpin,
+    Intro
   },
   data: () => ({
     video: true,
@@ -376,7 +411,7 @@ p {
 
 .modal {
   background-color: rgba(0, 0, 0, 0.9);
-  @apply rounded-sm p-8 mx-3 max-w-4xl border-2 border-gray-100 shadow overflow-y-auto;
+  @apply rounded-sm p-8 mx-3 max-w-4xl border-2 border-gray-100 shadow max-h-full overflow-y-auto;
   animation: fade-in 0.5s;
 }
 
@@ -393,49 +428,10 @@ p {
   }
 }
 
-.static {
-  animation: static-grow 1s ease-in;
-  height: 24rem;
-}
-
-@keyframes static-grow {
-  0% {
-    height: 0rem;
-  }
-  100% {
-    height: 24rem;
-  }
-}
-
-.new-challenger {
-  /* purgecss ignore current */
-  font-family: 'Crmson Text', serif;
-  font-size: 5rem;
-  font-weight: 900;
-  -webkit-text-stroke: 0.15rem rgb(255, 255, 255);
-  background: linear-gradient(to right, rgb(245, 168, 168), rgb(189, 7, 7));
-  background-clip: text;
-  color: transparent;
-  animation: new-challenger-move 1.2s ease-out;
-}
-
-@keyframes new-challenger-move {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(0%);
-  }
-}
-
 .font-gradient {
   background: linear-gradient(rgb(255, 255, 255), rgb(212, 15, 15));
   background-clip: text;
   color: transparent;
-}
-
-.a-bit-transparent {
-  opacity: 0.6;
 }
 
 .modal-background {

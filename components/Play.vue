@@ -222,7 +222,7 @@
               <Portal v-if="modalContent === 'learn'" to="modal">
                 <div class="title">Learn Melty</div>
                 <p class="mb-2 text-center text-lg">
-                  Cool guide by
+                  General guide by
                   <a href="https://twitter.com/Fimbulvetr090" target="_">Alps</a
                   >:
                 </p>
@@ -234,6 +234,20 @@
                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen
                   ></iframe>
+                </div>
+                <p class="mb-2 text-center text-lg">
+                  Recommended characters for beginners guide by 
+                  <a href="https://twitter.com/OnemiESESEBEME" target="_">Onemi</a
+                </p>
+                <div class="flex flex-col md:flex-row flex-wrap justify-center">
+                  <a
+                    class="button"
+                    href="https://www.evernote.com/shard/s622/sh/24574c5c-22ad-4853-9cb0-d53630d33fca/d97c8677816f7693"
+                    target="_"
+                  >
+                    <i class="fas fa-book mr-1"></i>
+                    <span class="font-gradient">Beginner Characters</span>
+                  </a>
                 </div>
                 <p class="mt-6 mb-1">
                   The Mizuumi wiki is the best place for info about poverty

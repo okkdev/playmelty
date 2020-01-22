@@ -442,7 +442,7 @@ p {
   background: linear-gradient(rgb(0, 0, 0), rgb(219, 0, 0));
   background-clip: text;
   color: transparent;
-  -webkit-text-stroke: 0.05rem rgb(255, 255, 255);
+  -webkit-text-stroke: 0.03rem rgb(255, 255, 255);
   @apply font-black;
 }
 

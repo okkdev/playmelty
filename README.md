@@ -1,6 +1,6 @@
-# meltyclub
+# Play Melty Blood
 
-> melty blood fansite
+Website to get people to try Melty Blood
 
 ## Build Setup
 

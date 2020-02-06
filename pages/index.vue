@@ -22,7 +22,7 @@ export default {
         },
         {
           name: 'og:image',
-          content: 'https://meltyblood.club/img/sway.gif'
+          content: 'https://play.meltyblood.club/img/sway.gif'
         },
         { name: 'og:image', content: 'https://play.meltyblood.club' }
       ]

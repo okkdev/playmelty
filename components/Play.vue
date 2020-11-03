@@ -352,6 +352,8 @@ export default {
     if (this.$route.query.video === 'false') {
       this.video = false
     }
+
+    setTimeout(() => (this.content = true), 3000)
   },
   methods: {
     toggleVideo() {

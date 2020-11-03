@@ -307,10 +307,6 @@
                     <i class="fas fa-tv mr-1"></i>
                     <span class="font-gradient">Melty.Games</span>
                   </a>
-                  <a class="button" href="http://www.meltydb.com/" target="_">
-                    <i class="fas fa-tv mr-1"></i>
-                    <span class="font-gradient">MeltyDB</span>
-                  </a>
                 </div>
               </Portal>
             </div>

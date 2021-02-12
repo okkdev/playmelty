@@ -131,7 +131,7 @@
                   </a>
                   <a
                     class="button"
-                    href="https://mega.nz/#!qRMTHK6A!QCBOqnH91TynUqQjddgm8omGBeIG5Yp_-iT-Q5QmTas"
+                    href="https://mega.nz/file/9Iw0FaoC#0Quohca7zbkjqZVtjhSvByW-SaGbd_cAyT4O8LfKM0Q"
                     target="_"
                   >
                     <i class="fas fa-cloud-download-alt mr-1"></i>

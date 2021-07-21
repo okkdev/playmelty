@@ -291,7 +291,7 @@
                 <div class="flex flex-col md:flex-row flex-wrap justify-center">
                   <a
                     class="button"
-                    href="http://wiki.mizuumi.net/w/Melty_Blood"
+                    href="https://wiki.gbl.gg/w/Melty_Blood/MBAACC"
                     target="_"
                   >
                     <i class="fas fa-book mr-1"></i>

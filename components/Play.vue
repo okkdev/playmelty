@@ -131,8 +131,7 @@
                   </a>
                   <a
                     class="button"
-                    href="https://mega.nz/file/9Iw0FaoC#0Quohca7zbkjqZVtjhSvByW-SaGbd_cAyT4O8LfKM0Q"
-                    target="_"
+                    href="https://github.com/okkdev/melty-installer/releases/latest/download/MeltyInstaller.exe"
                   >
                     <i class="fas fa-cloud-download-alt mr-1"></i>
                     <span class="font-gradient">Community Edition</span>

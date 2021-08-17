@@ -2,6 +2,8 @@
 
 Website to get people to try Melty Blood
 
+I experimented with features like portals. -> Code is weird lol
+
 ## Build Setup
 
 ``` bash

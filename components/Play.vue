@@ -114,11 +114,19 @@
                 <p class="mb-2">
                   Buy the game on Steam to support the developer.
                 </p>
-                <p class="mb-6">
+                <p class="mb-2">
                   Play the game with the free "community edition" which includes
                   many features and fixes as well as the fan made CCCaster
                   program which adds rollback netcode. If you want to play
                   online definitely use the community edition.
+                </p>
+                <p class="mb-6">
+                  The community edition now comes as a handy installer with
+                  optional downloads for CCCaster and <a
+                    href="https://concerto.shib.live/"
+                    target="_"
+                    >Concerto</a>, which is a modern GUI for CCCaster including
+                    a lobby system, invite links and discord integration.
                 </p>
                 <div class="flex flex-col md:flex-row justify-center flex-wrap">
                   <a

@@ -313,7 +313,7 @@
           <div class="flex flex-col md:flex-row flex-wrap justify-center">
             <a
               class="button"
-              href="https://discordapp.com/invite/33cskPv"
+              href="https://discord.gg/KeuSaJ5My8"
               target="_"
             >
               <i class="fab fa-discord font-normal mr-1"></i>

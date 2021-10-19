@@ -163,8 +163,7 @@
                   </a>
                   <a
                     class="button"
-                    href="https://concerto.shib.live/"
-                    target="_"
+                    href="https://github.com/shiburizu/concerto-mbaacc/releases/latest/download/Concerto.exe"
                   >
                     <span>Concerto</span>
                   </a>

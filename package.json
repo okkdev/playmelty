@@ -16,18 +16,11 @@
     "nuxt": "^2.0.0"
   },
   "devDependencies": {
-    "portal-vue": "^2.1.7",
-    "tailwindcss": "^1.2.0-canary.5",
-    "@nuxtjs/eslint-config": "^1.0.1",
-    "@nuxtjs/eslint-module": "^1.0.0",
-    "babel-eslint": "^10.0.1",
-    "eslint": "^6.1.0",
-    "eslint-plugin-nuxt": ">=0.4.2",
-    "eslint-config-prettier": "^4.1.0",
-    "eslint-plugin-prettier": "^3.0.1",
-    "prettier": "^1.16.4",
-    "nuxt-purgecss": "^0.2.1",
     "clean-css": "^4.2.1",
-    "postcss-preset-env": "^6.7.0"
+    "nuxt-purgecss": "^0.2.1",
+    "portal-vue": "^2.1.7",
+    "postcss-preset-env": "^6.7.0",
+    "prettier": "^1.16.4",
+    "tailwindcss": "^1.2.0-canary.5"
   }
 }

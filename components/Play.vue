@@ -26,11 +26,11 @@
     <div
       v-if="modal"
       @click.self="modal = false"
-      class="fixed h-full w-full modal-background z-20"
+      class="fixed z-20 w-full h-full modal-background"
     >
       <div
         @click.self="modal = false"
-        class="container h-full mx-auto flex justify-center items-center"
+        class="container flex items-center justify-center h-full mx-auto"
       >
         <div class="modal">
           <portal-target name="modal"></portal-target>
@@ -39,40 +39,40 @@
     </div>
 
     <!-- Main content div -->
-    <div v-if="content" class="content container mx-auto h-full flex flex-col">
+    <div v-if="content" class="container flex flex-col h-full mx-auto content">
       <!-- Background video toggle -->
       <div class="fixed right-0 m-3 opacity-75">
-        <div class="hidden md:flex flex-row">
+        <div class="flex-row hidden md:flex">
           <div class="mr-2 tracking-widest uppercase">Video</div>
           <div
             v-if="video"
             @click="toggleVideo"
-            class="border rounded-full border-gray-300 flex items-center cursor-pointer w-10 bg-red-700 justify-end shadow-inner shadow"
+            class="flex items-center justify-end w-10 bg-red-700 border border-gray-300 rounded-full shadow shadow-inner cursor-pointer"
           >
             <div
-              class="rounded-full border w-5 h-5 border-gray-300 shadow-inner bg-gray-200 shadow"
+              class="w-5 h-5 bg-gray-200 border border-gray-300 rounded-full shadow shadow-inner"
             ></div>
           </div>
           <div
             v-else
             @click="toggleVideo"
-            class="border rounded-full border-gray-300 flex items-center cursor-pointer w-10 justify-start shadow"
+            class="flex items-center justify-start w-10 border border-gray-300 rounded-full shadow cursor-pointer"
           >
             <div
-              class="rounded-full border w-5 h-5 border-gray-300 shadow-inner bg-gray-200 shadow"
+              class="w-5 h-5 bg-gray-200 border border-gray-300 rounded-full shadow shadow-inner"
             ></div>
           </div>
         </div>
       </div>
 
       <!-- Centered Content -->
-      <div class="flex flex-col h-full justify-center items-center">
+      <div class="flex flex-col items-center justify-center h-full">
         <!-- Play text with dancing necos -->
         <div class="flex">
           <img v-if="neco" class="mr-5" src="/img/sway.gif" alt="neco sway" />
           <h1
             @click="neco = !neco"
-            class="text-6xl tracking-widest font-gradient-2 cursor-pointer"
+            class="text-6xl tracking-widest cursor-pointer font-gradient-2"
           >
             PLAY
           </h1>
@@ -84,11 +84,11 @@
 
         <!-- Resource Buttons -->
         <div class="flex flex-col justify-center">
-          <div class="flex flex-col md:flex-row justify-center">
+          <div class="flex flex-col justify-center md:flex-row">
             <!-- Get the Game Button -->
             <div
               @click="openModal('get')"
-              class="button text-center flex flex-col md:w-56 flex-1 cursor-pointer"
+              class="flex flex-col flex-1 text-center cursor-pointer button md:w-56"
             >
               <div><i class="fas fa-gamepad"></i></div>
               <div>Get Melty</div>
@@ -97,7 +97,7 @@
                   <div class="title">
                     Get Melty
                   </div>
-                  <div @click="modal = false" class="cursor-pointer z-50">
+                  <div @click="modal = false" class="z-50 cursor-pointer">
                     <svg
                       class="fill-current"
                       xmlns="http://www.w3.org/2000/svg"
@@ -128,27 +128,51 @@
                     >Concerto</a>, which is a modern GUI for CCCaster including
                     a lobby system, invite links and discord integration.
                 </p>
-                <div class="flex flex-col md:flex-row justify-center flex-wrap">
+                <div class="flex flex-col flex-wrap justify-center md:flex-row">
                   <a
                     class="button"
                     href="https://store.steampowered.com/app/411370/Melty_Blood_Actress_Again_Current_Code/"
                     target="_"
                   >
-                    <i class="fab fa-steam-square font-normal mr-1"></i>
+                    <i class="mr-1 font-normal fab fa-steam-square"></i>
                     <span class="font-gradient">Steam Version</span>
                   </a>
                   <a
                     class="button"
                     href="https://github.com/okkdev/melty-installer/releases/latest/download/MeltyInstaller.exe"
                   >
-                    <i class="fas fa-cloud-download-alt mr-1"></i>
+                    <i class="mr-1 fas fa-cloud-download-alt"></i>
                     <span class="font-gradient">Community Edition</span>
                   </a>
                 </div>
-                <p class="my-2 text-center text-lg">
+                <p class="mt-3 mb-1">
+                  If the installer isn't working, download the parts manually and extract them to the same directory:
+                </p>
+                <div class="flex flex-col flex-wrap justify-center md:flex-row">
+                  <a
+                    class="button"
+                    href="https://1g4i.short.gy/mbaacc"
+                  >
+                    <span>MBAACC</span>
+                  </a>
+                  <a
+                    class="button"
+                    href="https://1g4i.short.gy/cccaster"
+                  >
+                    <span>CCCaster</span>
+                  </a>
+                  <a
+                    class="button"
+                    href="https://concerto.shib.live/"
+                    target="_"
+                  >
+                    <span>Concerto</span>
+                  </a>
+                </div>
+                <p class="my-2 text-lg text-center">
                   CCCaster guide:
                 </p>
-                <!-- Youtube Intro to Melty -->
+                <!-- Youtube cccaster guide -->
                 <div class="mx-auto youtube-video">
                   <iframe
                     src="https://www.youtube.com/embed/aMxwkPb5kOM"
@@ -162,7 +186,7 @@
             <!-- About the Game -->
             <div
               @click="openModal('about')"
-              class="button text-center flex flex-col md:w-56 flex-1 cursor-pointer"
+              class="flex flex-col flex-1 text-center cursor-pointer button md:w-56"
             >
               <div><i class="fas fa-info-circle"></i></div>
               <div>About Melty</div>
@@ -171,7 +195,7 @@
                   <div class="title">
                     About Melty
                   </div>
-                  <div @click="modal = false" class="cursor-pointer z-50">
+                  <div @click="modal = false" class="z-50 cursor-pointer">
                     <svg
                       class="fill-current"
                       xmlns="http://www.w3.org/2000/svg"
@@ -210,13 +234,13 @@
                   With a cast of 31 characters with 3 forms (Moons) each the
                   game has a total of <i>93</i> playable characters.
                 </p>
-                <p class="text-right mb-6">
+                <p class="mb-6 text-right">
                   Source:
                   <a href="https://en.wikipedia.org/wiki/Melty_Blood"
                     >Wikipedia</a
                   >
                 </p>
-                <p class="mb-2 text-center text-lg">
+                <p class="mb-2 text-lg text-center">
                   Nice intro by
                   <a
                     href="https://www.youtube.com/channel/UCL45vmk8Jx3Pa3q0xUbZWtw"
@@ -238,7 +262,7 @@
             <!-- Learning Resources -->
             <div
               @click="openModal('learn')"
-              class="button text-center flex flex-col md:w-56 flex-1 cursor-pointer"
+              class="flex flex-col flex-1 text-center cursor-pointer button md:w-56"
             >
               <div><i class="fas fa-graduation-cap"></i></div>
               <div>Learn Melty</div>
@@ -247,7 +271,7 @@
                   <div class="title">
                     Learn Melty
                   </div>
-                  <div @click="modal = false" class="cursor-pointer z-50">
+                  <div @click="modal = false" class="z-50 cursor-pointer">
                     <svg
                       class="fill-current"
                       xmlns="http://www.w3.org/2000/svg"
@@ -261,7 +285,7 @@
                     </svg>
                   </div>
                 </div>
-                <p class="mb-2 text-center text-lg">
+                <p class="mb-2 text-lg text-center">
                   General guide by
                   <a href="https://twitter.com/Fimbulvetr090" target="_">Alps</a
                   >:
@@ -275,19 +299,19 @@
                     allowfullscreen
                   ></iframe>
                 </div>
-                <p class="mb-1 mt-6 text-center text-lg">
+                <p class="mt-6 mb-1 text-lg text-center">
                   Recommended characters for beginners guide by
                   <a href="https://twitter.com/OnemiESESEBEME" target="_"
                     >Onemi</a
                   >:
                 </p>
-                <div class="flex flex-col md:flex-row flex-wrap justify-center">
+                <div class="flex flex-col flex-wrap justify-center md:flex-row">
                   <a
                     class="button"
                     href="https://www.evernote.com/shard/s622/sh/24574c5c-22ad-4853-9cb0-d53630d33fca/d97c8677816f7693"
                     target="_"
                   >
-                    <i class="fas fa-book mr-1"></i>
+                    <i class="mr-1 fas fa-book"></i>
                     <span class="font-gradient">Beginner Characters</span>
                   </a>
                 </div>
@@ -295,13 +319,13 @@
                   The Mizuumi wiki is the best place for info about poverty
                   fighting games.
                 </p>
-                <div class="flex flex-col md:flex-row flex-wrap justify-center">
+                <div class="flex flex-col flex-wrap justify-center md:flex-row">
                   <a
                     class="button"
                     href="https://wiki.gbl.gg/w/Melty_Blood/MBAACC"
                     target="_"
                   >
-                    <i class="fas fa-book mr-1"></i>
+                    <i class="mr-1 fas fa-book"></i>
                     <span class="font-gradient">Mizuumi Wiki</span>
                   </a>
                 </div>
@@ -309,22 +333,22 @@
                   If you want to watch matches with specific characters, there's
                   melty.games and meltydb.
                 </p>
-                <div class="flex flex-col md:flex-row flex-wrap justify-center">
+                <div class="flex flex-col flex-wrap justify-center md:flex-row">
                   <a class="button" href="http://melty.games/" target="_">
-                    <i class="fas fa-tv mr-1"></i>
+                    <i class="mr-1 fas fa-tv"></i>
                     <span class="font-gradient">Melty.Games</span>
                   </a>
                 </div>
               </Portal>
             </div>
           </div>
-          <div class="flex flex-col md:flex-row flex-wrap justify-center">
+          <div class="flex flex-col flex-wrap justify-center md:flex-row">
             <a
               class="button"
               href="https://discord.gg/KeuSaJ5My8"
               target="_"
             >
-              <i class="fab fa-discord font-normal mr-1"></i>
+              <i class="mr-1 font-normal fab fa-discord"></i>
               <span class="font-gradient">Join the Discord</span>
             </a>
           </div>
